@@ -1,0 +1,66 @@
+@use "../Base/Vars" as v;
+
+.step1-section{
+    
+    display: flex;
+    
+    .left-side{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        background-color: #fff;
+        padding: 4vw;
+        .logo{
+            margin-bottom: 70px;
+        }
+        .h2{
+            color:v.$main-color;
+        }
+    }
+
+    .right-side{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 70%;
+        }
+    }
+
+    .section-bgr {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.5;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        &.overlay {
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: .3;
+                background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0.00) 100%);
+            }
+        }
+        &.overlay-blue {
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.9;
+                background: linear-gradient(180deg, #A0E2FE 0%, rgba(30, 52, 75, 0.00) 100%);
+            }
+        }
+    }
+}
