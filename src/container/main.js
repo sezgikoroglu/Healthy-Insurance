@@ -6,9 +6,9 @@ const Main = () => {
     const {ActiveStepComponent} = useApp();
   
     return (
-    <div className='container'>
+    <main className='container'>
         <ActiveStepComponent/>
-    </div>
+    </main>
   )
 }
 

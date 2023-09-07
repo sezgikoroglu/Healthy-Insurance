@@ -35,8 +35,9 @@ const AppProvider = ({ children }) => {
     }
     
     const [activeStep, setActiveStep] = useState('step1'); // Başlangıçta 'step1' olarak ayarlandı
+    const [currentPatient,setCurrentPatient]=useState()
     const ActiveStepComponent = Steps[activeStep].component;
-    const values={activeStep,setActiveStep,ActiveStepComponent}
+    const values={activeStep,setActiveStep,currentPatient,setCurrentPatient,ActiveStepComponent}
     
     return (
         <AppContext.Provider value={values}>

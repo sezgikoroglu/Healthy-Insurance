@@ -1,6 +1,6 @@
 import React from "react";
 
-function carIco() {
+function CarIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ function carIco() {
   );
 }
 
-export default carIco;
+export default CarIcon;

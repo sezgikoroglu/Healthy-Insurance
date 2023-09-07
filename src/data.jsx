@@ -113,7 +113,7 @@ const data = {
 				insuranceStatus : `Uninsured`
 			},
 			images : {
-				smallAvatar : '',
+				smallAvatar : '/avatars/noah-small-avatar.png',
 				bigAvatar : '/avatars/noah-big-avatar.png',
 				bigAvatarHappy : '/avatars/noah-big-avatar-happy.png',
 				bigAvatarSad : '/avatars/noah-big-avatar-sad.png',

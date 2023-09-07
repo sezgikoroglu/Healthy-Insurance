@@ -1,34 +1,42 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import {useAppContext} from './../context/AppContext';
+import { useApp } from '../context/state';
 
 function Step2Bgr() {
 
-  const {state} = useAppContext();
+  const {currentPatient,setCurrentPatient} = useApp();
 
+  if(currentPatient){
 
-  useEffect(() => {
-
-
-    if(state.avatarSelected){
-      gsap.set("#default-avatar",{display:'none'});
+      gsap.to("#default-avatar",{display:"none"});
       gsap.to("#default-avatar-information", {opacity:0, duration:0.5});
 
-    }
-    // // gsap.to("#min", 24, {
-    // //    rotation: 360,
-    // //    transformOrigin:"bottom center",
-    // //    ease:'none',
-    // //    repeat:-1
-    // // });
-    // // gsap.to("#hour", 144, {
-    // //    rotation: 360,
-    // //    transformOrigin:"right center",
-    // //    ease:'none',
-    // //    repeat:-1
-    // // });
+  }
+  // const {state} = useAppContext();
 
-  },[state]);
+
+  // useEffect(() => {
+
+
+  //   if(state.avatarSelected){
+  //     gsap.set("#default-avatar",{display:'none'});
+  //     gsap.to("#default-avatar-information", {opacity:0, duration:0.5});
+
+  //   }
+  //   // // gsap.to("#min", 24, {
+  //   // //    rotation: 360,
+  //   // //    transformOrigin:"bottom center",
+  //   // //    ease:'none',
+  //   // //    repeat:-1
+  //   // // });
+  //   // // gsap.to("#hour", 144, {
+  //   // //    rotation: 360,
+  //   // //    transformOrigin:"right center",
+  //   // //    ease:'none',
+  //   // //    repeat:-1
+  //   // // });
+
+  // },[state]);
 
   return (
     <svg
