@@ -4,13 +4,14 @@ import AvatarCounter from '../components/AvatarCounter';
 import BigAvatar from '../components/BigAvatar';
 import TokenCta from '../components/TokenCta';
 import { gsap } from 'gsap/gsap-core';
+import NextStepButton from '../components/NextStepButton';
 
 const Environment = () => {
 
   useEffect(()=>{
     gsap.set(".modal",{right:"-120%",duration:0.5});
     gsap.to(".modal",{right:"0",duration:0.5,delay:1});
-  })
+  },[])
     
   return (
     <section className="section-4 ci-section">
@@ -36,6 +37,7 @@ const Environment = () => {
           </div>
         </div>
       </div>
+      <NextStepButton value={"advance"}/>
     </section>
   );
 };

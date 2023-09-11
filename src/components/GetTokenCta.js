@@ -9,9 +9,9 @@ const GetTokenCta = () => {
   useEffect(()=>{
     if(parseInt(currentPatient.environment.tokens) > 0 ){
       gsap.set(".get-token-btn",{top:"0",background:"none",color:"black",duration:0.5})
-      gsap.to(".get-token-btn",{top:"-20%",background:"green",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:0.5});
+      gsap.to(".get-token-btn",{top:"-20%",background:"green",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8});
     }
-  })
+  },[])
  
 
   return (

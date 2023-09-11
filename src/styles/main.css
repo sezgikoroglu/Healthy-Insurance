@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
   height: 100%;
@@ -466,6 +467,7 @@ h6, .h6 {
 }
 .section-4 .left-col .big-avatar {
   height: 100%;
+  transition: ease 0.5s;
 }
 .section-4 .left-col .big-avatar img {
   max-height: 70%;
@@ -484,4 +486,15 @@ h6, .h6 {
 .section-4 .right-col .modal-info {
   width: 87%;
   max-height: 77%;
+}
+.section-4 .right-col .content {
+  color: rgb(30, 52, 75);
+}
+.section-4 .right-col hr {
+  height: 1px; /* Çizginin yüksekliğini ayarlayın */
+  background-color: rgb(160, 226, 254);
+  margin-bottom: 24px;
+}
+.section-4 .right-col .below-content {
+  color: #0097CD;
 }/*# sourceMappingURL=main.css.map */
