@@ -1,48 +1,46 @@
 @use "../Base/Vars" as v;
 
-.step2-section{
+.step2-section {
     
     background-color: #39f;
     background: linear-gradient(137deg, rgba(160, 226, 254, 0) 0%, rgba(160, 226, 254, 0.23) 36.85%, rgba(183, 232, 253, 0.52) 66.67%, #E5F7FF 100%), #fff;
     display: flex;
 
-    .first-col{
+    .first-col {
         width: 30%;
         padding: 5vw 10px 5vw 5vw;
 		z-index: 2;
 		height: 100%;
 		overflow: auto;
 
-        h2{
+        h2 {
             margin: 0 0 clamp(25px, 1.7vw, 60px);
         }
-        p{
+        p {
             font-size: 22px;
             margin: 0 0 3rem;
         }
 
-        .small-avatars-wrap{
+        .small-avatars-wrap {
             margin-top: 3em;
             display: grid;
             grid-template-columns: repeat(3,1fr);
             row-gap: 1.5vw;
             column-gap: 30px;
-            
-
         }
         
     }
-    .second-col{
+    .second-col {
         width: 30%;
         padding-bottom: 8.4%;
 
-        .big-avatar{
+        .big-avatar {
             height: 100%;
             width: 100%;
             display: flex;
             align-items: end;
 
-            img{
+            img {
                 max-height: 80%;
 			    width: 80%;
 			    object-fit: contain;
@@ -50,14 +48,14 @@
         }
         
     }
-    .third-col{
+    .third-col {
         width: 40%;
         
     }
 
 }
 
-.small-avatar-wrap{
+.small-avatar-wrap {
     
     cursor: pointer;
     border-radius: 16px;
@@ -66,13 +64,13 @@
 
     
 
-    .inner-img-wrap{
+    .inner-img-wrap {
         background-color: rgba(0, 151, 205, 0.2);
         border-radius: 16px;
 		transition: all .5s ease;
 		aspect-ratio: 115 / 135;
 
-        img{
+        img {
             position: absolute;
             bottom: 0;
             object-fit: contain;

@@ -2,7 +2,8 @@ import React from 'react'
 
 const PopUpEnvironment = () => {
   return (
-    <div>pop-up-environment</div>
+    <div>
+      pop-up-environment</div>
   )
 }
 

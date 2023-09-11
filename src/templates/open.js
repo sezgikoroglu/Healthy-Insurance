@@ -9,7 +9,7 @@ const Open = () => {
   const step1 = data.steps[0]
  
   return (
-    <section className='step1-section'>
+    <section className='step1-section ci-section'>
       <div className="section-bgr">
 					<Step1Bgr />
 				</div>

@@ -1,42 +1,48 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { useApp } from "../context/state";
 
 
 function Step1Bgr() {
 
+	const {activeStep,setActiveStep}=useApp()
+
 	useEffect(() => {
 
+			if(activeStep==="step1")
+
+			{
             gsap.set("#sun",{y: ()=> window.innerHeight/3});
             gsap.to("#sun",10,{
                 y: () => 10
             });
 
-			gsap.to("#cloud", 20, {
-				x: () => window.innerWidth,
-				onComplete() {
-					gsap.set("#cloud",{x: () => -window.innerWidth + document.getElementsByClassName('step-1-content')[0].offsetWidth});
-					gsap.to("#cloud", 24, {
-						x: () => window.innerWidth,
-						repeat:-1,
-						ease:'none'
-					});
-				},
-				ease:'none',
-			});
+			// gsap.to("#cloud", 20, {
+			// 	x: () => window.innerWidth,
+			// 	onComplete() {
+			// 		gsap.set("#cloud",{x: () => -window.innerWidth + document.getElementsByClassName('step-1-content')[0].offsetWidth});
+			// 		gsap.to("#cloud", 24, {
+			// 			x: () => window.innerWidth,
+			// 			repeat:-1,
+			// 			ease:'none'
+			// 		});
+			// 	},
+			// 	ease:'none',
+			// });
 
-			gsap.to("#white-cloud", 26, {
-				x: () => window.innerWidth,
-				onComplete() {
-					gsap.set("#white-cloud",{x: () => -window.innerWidth - document.getElementsByClassName('step-1-content')[0].offsetWidth});
-					gsap.to("#white-cloud", 40, {
-						x: () => window.innerWidth + document.getElementsByClassName('step-1-content')[0].offsetWidth,
-						repeat:-1,
-						ease:'none'
-					});
-				},
-				ease:'none',
-			});
-
+			// gsap.to("#white-cloud", 26, {
+			// 	x: () => window.innerWidth,
+			// 	onComplete() {
+			// 		gsap.set("#white-cloud",{x: () => -window.innerWidth - document.getElementsByClassName('step-1-content')[0].offsetWidth});
+			// 		gsap.to("#white-cloud", 40, {
+			// 			x: () => window.innerWidth + document.getElementsByClassName('step-1-content')[0].offsetWidth,
+			// 			repeat:-1,
+			// 			ease:'none'
+			// 		});
+			// 	},
+			// 	ease:'none',
+			// });
+			}
 		
 
 	},[]);

@@ -1,0 +1,45 @@
+.section-4 {
+    display: flex;
+    
+    .section-bgr {
+        opacity: 1;
+        display: flex;
+    }
+
+    .avatar-counter {
+        position: absolute;
+        top:1vw;
+        left:1vw;
+    }
+
+    .left-col {
+        width: 50%;
+        height: 100%;
+        
+        .big-avatar {
+             height: 100%;
+
+            img {
+                max-height: 70%;
+			    object-fit: contain;
+                position: absolute;
+                top: 50%;
+                //left: 20%;
+                transform: translateY(-40%);
+            }
+        }
+    }
+
+    .right-col{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .modal-info{
+            width: 87%;
+            max-height: 77%;
+        }
+    }
+    
+}

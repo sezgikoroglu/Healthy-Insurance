@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useApp } from '../context/state';
 import CarIcon from '../assests/carIco';
 import IncomeIcon from '../assests/incomeIcon';
@@ -7,12 +7,17 @@ import EnvironmentIcon from '../assests/environmentIcon';
 import NutritionIcon from '../assests/nutritionIcon';
 import HouseIcon from '../assests/houseIcon';
 import DigitalDivideIcon from '../assests/digitalDivideIcon';
+import { gsap } from 'gsap/gsap-core';
 
 const AvatarInfo = () => {
 
   const {currentPatient,setCurrentPatient} = useApp();
-  console.log(currentPatient)
 
+  useEffect(()=>{
+    gsap.set(".avatar-info-wrap",{right:"-100%"});
+    gsap.to(".avatar-info-wrap", {right:"0", duration:0.5,delay:0.5});
+  },[currentPatient])
+  
   return (
     <div className='avatar-info-wrap'>
         <div className="avatar-info">

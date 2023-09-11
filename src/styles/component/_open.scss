@@ -1,30 +1,30 @@
 @use "../Base/Vars" as v;
 
-.step1-section{
+.step1-section {
     
     display: flex;
     
-    .left-side{
+    .left-side {
         width: 40%;
         display: flex;
         flex-direction: column;
         min-height: 100%;
         background-color: #fff;
         padding: 4vw;
-        .logo{
+        .logo {
             margin-bottom: 70px;
         }
-        .h2{
+        .h2 {
             color:v.$main-color;
         }
     }
 
-    .right-side{
+    .right-side {
         width: 60%;
         display: flex;
         align-items: center;
         justify-content: center;
-        img{
+        img {
             width: 70%;
         }
     }

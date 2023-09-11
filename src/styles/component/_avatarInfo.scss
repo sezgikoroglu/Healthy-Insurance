@@ -1,29 +1,33 @@
-.avatar-info-wrap{
+.avatar-info-wrap {
     height: 100%;
     width: 100%;
     //background-color:#39f; //,linear-gradient(137deg, rgba(160, 226, 254, 0) 0%, rgba(160, 226, 254, 0.23) 36.85%, rgba(183, 232, 253, 0.52) 66.67%, #E5F7FF 100%), #FFF;
     background-color: aliceblue;
     padding: 5vw 5vw 8vw;
-    .avatar-info{
+    .avatar-info {
         display: flex;
         flex-direction: column;
         overflow: auto;
-        .info-row{
+        .info-row {
             border-bottom: 1px solid #A0E2FE;
             margin-bottom: clamp(20px, 1.3vw, 70px);
             padding-bottom: clamp(20px, 1.3vw, 70px);
 
-            .determinant-row{
+            &:last-child {
+            border:none;
+            }
+
+            .determinant-row {
                 display: flex;
                 align-items: center;
                 margin-bottom: 18px;
 
-                .determinant-img{
+                .determinant-img {
                     width: 40px;
                     height: 40px;
                     margin-right: 16px;
 
-                    svg{
+                    svg {
                         width: 100%;
                         height: 100%;
                     }

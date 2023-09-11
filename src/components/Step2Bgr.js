@@ -8,7 +8,7 @@ function Step2Bgr() {
 
   if(currentPatient){
 
-      gsap.to("#default-avatar",{display:"none"});
+      gsap.to("#default-avatar",{display:"none",duration:0.5});
       gsap.to("#default-avatar-information", {opacity:0, duration:0.5});
 
   }

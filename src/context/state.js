@@ -11,6 +11,7 @@ import PopUpCheckpoint from '../templates/pop-up-checkpoint';
 import Prescription from '../templates/prescription';
 import PopUpPrescription from '../templates/pop-up-prescription';
 import Close from '../templates/Close';
+import EnvironmentPopUp from '../templates/environment-popUp';
 
 
 const AppContext = createContext();
@@ -20,21 +21,22 @@ const AppProvider = ({ children }) => {
     const Steps = {
         step1: { component: Open },
         step2: { component: AvatarSelection },
-        step3: { component: Environment },
-        step4: { component: PopUpEnvironment},
-        step5: { component: ResearchUse},
-        step6: { component: DecisionCheckpoint},
-        step7: { component: CheckPointGetTokens},
-        step8: { component: CheckPointLoseTokens},
-        step9: { component: ResearchUse},
-        step10:{ component: PopUpCheckpoint},
-        step11:{ component: Prescription},
-        step12:{ component: PopUpPrescription},
-        step13:{ component: Close}
+        step3: { component: EnvironmentPopUp},
+        step4: { component: Environment },
+        step5: { component: PopUpEnvironment},
+        step6: { component: ResearchUse},
+        step7: { component: DecisionCheckpoint},
+        step8: { component: CheckPointGetTokens},
+        step9: { component: CheckPointLoseTokens},
+        step10: { component: ResearchUse},
+        step11:{ component: PopUpCheckpoint},
+        step12:{ component: Prescription},
+        step13:{ component: PopUpPrescription},
+        step14:{ component: Close}
         
     }
     
-    const [activeStep, setActiveStep] = useState('step1'); // Başlangıçta 'step1' olarak ayarlandı
+    const [activeStep, setActiveStep] = useState('step2'); // Başlangıçta 'step1' olarak ayarlandı
     const [currentPatient,setCurrentPatient]=useState()
     const ActiveStepComponent = Steps[activeStep].component;
     const values={activeStep,setActiveStep,currentPatient,setCurrentPatient,ActiveStepComponent}
