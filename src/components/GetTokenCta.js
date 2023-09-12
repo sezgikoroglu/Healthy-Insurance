@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap/gsap-core';
-import { useApp } from '../context/state';
+//import { useApp } from '../context/state';
 
 const GetTokenCta = ({tokens}) => {
 
-  const {currentPatient,setCurrentPatient} = useApp();
-  const {totalToken,setTotalToken} = useApp();
 
   useEffect(()=>{
     if(parseInt(tokens) > 0 ){

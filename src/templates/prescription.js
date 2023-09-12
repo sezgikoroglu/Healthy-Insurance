@@ -9,9 +9,9 @@ const Prescription = () => {
   return (
   
      <Context step={<Step7Bgr />}
-     modalTitle={currentPatient.receipt.title} 
-     tokens={currentPatient.receipt.tokens}
-     modalContent={currentPatient.receipt.content}
+              modalTitle={currentPatient.receipt.title} 
+              tokens={currentPatient.receipt.tokens}
+              modalContent={currentPatient.receipt.content}
      />  
   
   )

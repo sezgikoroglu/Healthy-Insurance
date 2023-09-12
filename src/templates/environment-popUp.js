@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Step1Bgr from "../components/Step1Bgr";
 import AvatarCounter from "../components/AvatarCounter";
 import NextStepButton from "../components/NextStepButton";
+import { useApp } from '../context/state';
 
 const EnvironmentPopUp = () => {
+
+  const {currentPatient,setCurrentPatient}=useApp()
+  const {totalToken,setTotalToken} = useApp();
+
+
+  useEffect(()=>{
+    if (isNaN(parseInt(currentPatient.tokens.initial))) {
+         setTotalToken(0)
+    } 
+   },[])
+
   return (
     <section className="section-3 ci-section">
       <div className="section-bgr overlay">

@@ -32,11 +32,10 @@ const AppProvider = ({ children }) => {
         step11:{ component: Prescription},
         step12:{ component: PopUpPrescription},
         step13:{ component: Close},
-        //step13:{ component: Close}
         
     }
     
-    const [activeStep, setActiveStep] = useState('step2'); // Başlangıçta 'step1' olarak ayarlandı
+    const [activeStep, setActiveStep] = useState('step1'); // Başlangıçta 'step1' olarak ayarlandı
     const [currentPatient,setCurrentPatient]=useState();
     const ActiveStepComponent = Steps[activeStep].component;
     const [imageSrc, setImageSrc] = useState("");

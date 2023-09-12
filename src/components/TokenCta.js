@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import GetTokenCta from './GetTokenCta'
 import LoseTokenCta from './LoseTokenCta'
 import { useApp } from '../context/state'
@@ -6,7 +6,12 @@ import { useApp } from '../context/state'
 const TokenCta = ({tokens}) => {
 
   const {totalToken,setTotalToken} = useApp();
-  setTotalToken(totalToken+parseInt(tokens))
+  console.log(tokens)
+
+  useEffect(()=>{
+    setTotalToken(parseInt(totalToken)+parseInt(tokens))
+  },[])
+  
 
   return (
     <div className='token-cta-wrap'>

@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 
 const Context = ({step, modalTitle, modalContent, tokens}) => {
 
+    
     useEffect(()=>{
       gsap.set(".modal",{right:"-120%",duration:0.5});
       gsap.to(".modal",{right:"0",duration:0.5,delay:1});
@@ -21,7 +22,7 @@ const Context = ({step, modalTitle, modalContent, tokens}) => {
           <AvatarCounter />
         </div>
         <div className="left-col">
-          <BigAvatar />
+          <BigAvatar state={"normal"}  tokens={tokens} />
         </div>
         <div className="right-col">
           <div className="modal-info">

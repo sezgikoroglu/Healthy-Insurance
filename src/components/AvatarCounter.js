@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useApp } from "../context/state";
 
 const AvatarCounter = () => {
   const { currentPatient, setCurrentPatient } = useApp();
   const {totalToken,setTotalToken} = useApp();
+
+  
  
   return (
     <div className="avatar-counter-wrap ">
