@@ -256,6 +256,12 @@ h6, .h6 {
   padding-left: 32px;
 }
 
+.avatar-counter-abs {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+}
+
 .bg-green {
   background: linear-gradient(0deg, #3E944A, #3E944A), linear-gradient(0deg, #4DB95C, #4DB95C);
   border: 4px solid rgb(62, 148, 74);
@@ -456,11 +462,6 @@ h6, .h6 {
   opacity: 1;
   display: flex;
 }
-.section-4 .avatar-counter {
-  position: absolute;
-  top: 1vw;
-  left: 1vw;
-}
 .section-4 .left-col {
   width: 50%;
   height: 100%;
@@ -497,4 +498,116 @@ h6, .h6 {
 }
 .section-4 .right-col .below-content {
   color: #0097CD;
+}
+
+.step-5 .section-bgr {
+  opacity: 1;
+}
+.step-5 .avatar-counter {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+}
+
+.do-you-have .do-you-have-wrp .do-you-have-top {
+  padding: 0 clamp(20px, 5vw, 40px);
+  margin-bottom: clamp(20px, 5vw, 48px);
+  border-bottom: 1px solid rgb(160, 226, 254);
+}
+.do-you-have .do-you-have-wrp .do-you-have-top h4 {
+  color: rgb(0, 151, 205);
+  margin-bottom: clamp(2px, 5vw, 15px);
+}
+.do-you-have .do-you-have-wrp .do-you-have-top h1 {
+  color: rgb(30, 52, 75);
+}
+.do-you-have .do-you-have-wrp .do-you-have-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.do-you-have .do-you-have-wrp .do-you-have-bottom h5 {
+  margin-bottom: 28px;
+  margin-bottom: clamp(2px, 5vw, 15px);
+  color: rgb(30, 52, 75);
+}
+.do-you-have .do-you-have-wrp .do-you-have-bottom .range-container {
+  position: relative;
+  width: 100%;
+}
+.do-you-have .do-you-have-wrp .do-you-have-bottom .input-range {
+  width: 100%;
+  margin: 2.6vw 0 1.05vw;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 1.7vw;
+  border-radius: 16px;
+  background: rgb(0, 151, 205);
+  outline: none;
+  transition: 1s ease;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.do-you-have .do-you-have-wrp .do-you-have-bottom .input-range:hover {
+  opacity: 1;
+}
+.do-you-have .do-you-have-wrp .do-you-have-bottom .input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: url("/src/assests/slider-btn.png") center no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin-top: 15px;
+  height: 5.7vw;
+  width: 5.7vw;
+}
+
+.step-7 {
+  background-image: radial-gradient(121.39% 114.15% at 44.52% 41.85%, #0097CD 0%, #1E344B 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+.step-7 .title-checkpoint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 48px;
+  padding: 2.5vw;
+}
+.step-7 .main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.step-7 .main-div .big-avatar {
+  position: absolute;
+  z-index: 5;
+  left: 10%;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 20%;
+}
+.step-7 .main-div .big-avatar img {
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.step-7 .logo {
+  width: clamp(100px, 10.5vw, 400px);
+  position: absolute;
+  bottom: clamp(15px, 2vw, 65px);
+  right: clamp(15px, 5vw, 65px);
+}
+.step-7 .logo svg {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

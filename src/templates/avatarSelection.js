@@ -35,7 +35,7 @@ const AvatarSelection = () => {
             </div>
         </div>
         <div className="second-col">
-            { currentPatient && <BigAvatar /> }
+            { currentPatient && <BigAvatar state={"normal"} /> }
         </div>
         <div className="third-col">
             { currentPatient && <AvatarInfo /> }

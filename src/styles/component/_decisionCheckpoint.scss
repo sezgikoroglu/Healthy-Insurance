@@ -1,0 +1,53 @@
+.step-7 {
+	background-image:radial-gradient(121.39% 114.15% at 44.52% 41.85%, #0097CD 0%, #1E344B 100%);;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+
+	.title-checkpoint{
+		position: absolute;
+		top: 0;
+		left: 0;
+  		height: 48px; 
+		padding: 2.5vw;
+	}
+
+	.main-div{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+        width: 100%;
+        height: 100%;
+
+		.big-avatar{
+			position: absolute;
+			z-index: 5;
+			left: 10%;
+			display: flex;
+			align-items: flex-end;
+			height: 100%;
+			width: 20%;
+			
+			img {
+                position: absolute;
+                height: 70%;
+                width: 100%;
+                top: 50%;
+                transform:translateY(-50%);
+				object-fit: contain;
+			}
+		}
+	}
+
+    .logo{
+        width: clamp(100px, 10.5vw, 400px);
+        position:absolute;
+        bottom: clamp(15px, 2vw, 65px);
+        right: clamp(15px, 5vw, 65px);
+
+        svg{
+            width: 100%;
+        }
+    }
+}

@@ -2,10 +2,24 @@ import React, { useEffect, useState } from 'react'
 import { useApp } from '../context/state';
 import { gsap } from 'gsap/gsap-core';
 
-const BigAvatar = () => {
+const BigAvatar = ({state,tokens}) => {
     const {currentPatient,setCurrentPatient} = useApp();
     const {activeStep}=useApp()
     const {imageSrc, setImageSrc} = useApp();
+
+    useEffect(()=>{
+        
+        if (state==="normal"){
+          setImageSrc(currentPatient.images.bigAvatar)
+        } else if( state==="happy"){
+          setImageSrc(currentPatient.images.bigAvatarHappy)
+        } else if( state==="sad"){
+          setImageSrc(currentPatient.images.bigAvatarSad)
+        } else if( state==="pensive"){
+          setImageSrc(currentPatient.images.bigAvatarPensive)
+        }
+
+    },[])
 
     useEffect(()=>{
       if (activeStep==="step2"){
@@ -14,20 +28,21 @@ const BigAvatar = () => {
         gsap.to(".big-img",{right:"0",duration:0.5});
       }
 
-      else if (activeStep==="step4"){
+      else if (activeStep==="step4" || activeStep==="step5" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step12"){
         gsap.set(".big-img",{left:"-50%",duration:0.5});
         gsap.to(".big-img",{left:"20%",duration:0.5,delay:0.5});
         
-        setTimeout(() => {
-          {if(parseInt(currentPatient.environment.tokens) > 0 ){
-            setImageSrc(currentPatient.images.bigAvatarHappy)
+          if(activeStep==="step4" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step12" ){
+            setTimeout(() => {
+              {if(parseInt(tokens)>0 ){
+                setImageSrc(currentPatient.images.bigAvatarHappy)
+              }
+            
+              else{
+                setImageSrc(currentPatient.images.bigAvatarSad)
+              }}
+            },2000);
           }
-        
-          else if(parseInt(currentPatient.environment.tokens) <= 0 ){
-            setImageSrc(currentPatient.images.bigAvatarSad)
-          }}
-        },2000);
-
       }
     },[currentPatient])
 

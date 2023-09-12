@@ -2,15 +2,17 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap/gsap-core';
 import { useApp } from '../context/state';
 
-const GetTokenCta = () => {
+const GetTokenCta = ({tokens}) => {
 
   const {currentPatient,setCurrentPatient} = useApp();
+  const {totalToken,setTotalToken} = useApp();
 
   useEffect(()=>{
-    if(parseInt(currentPatient.environment.tokens) > 0 ){
+    if(parseInt(tokens) > 0 ){
       gsap.set(".get-token-btn",{top:"0",background:"none",color:"black",duration:0.5})
       gsap.to(".get-token-btn",{top:"-20%",background:"green",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8});
     }
+    
   },[])
  
 

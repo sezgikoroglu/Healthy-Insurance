@@ -3,8 +3,8 @@ import { useApp } from "../context/state";
 
 const AvatarCounter = () => {
   const { currentPatient, setCurrentPatient } = useApp();
-  console.log(currentPatient);
-
+  const {totalToken,setTotalToken} = useApp();
+ 
   return (
     <div className="avatar-counter-wrap ">
       <div className="left-side">
@@ -44,7 +44,7 @@ const AvatarCounter = () => {
             stroke-width="4"
           />
         </svg>
-        <div className="medium-text">{currentPatient.tokens.initial}</div>
+        <div className="medium-text">{totalToken}</div>
       </div>
     </div>
   );

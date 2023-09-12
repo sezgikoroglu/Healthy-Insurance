@@ -2,7 +2,7 @@ import React from 'react'
 
 const Close = () => {
   return (
-    <div>Close</div>
+    <h1>close</h1>
   )
 }
 

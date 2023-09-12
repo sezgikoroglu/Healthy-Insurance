@@ -12,10 +12,13 @@ import { gsap } from 'gsap/gsap-core';
 const AvatarInfo = () => {
 
   const {currentPatient,setCurrentPatient} = useApp();
+  const {totalToken,setTotalToken} = useApp();
 
   useEffect(()=>{
     gsap.set(".avatar-info-wrap",{right:"-100%"});
     gsap.to(".avatar-info-wrap", {right:"0", duration:0.5,delay:0.5});
+
+    setTotalToken(currentPatient.tokens.initial)
   },[currentPatient])
   
   return (
