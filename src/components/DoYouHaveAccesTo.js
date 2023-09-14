@@ -16,7 +16,7 @@ const DoYouHaveAccessTo = () => {
     console.log("event.clientX"+event.cli)
     const thumb = event.target;
     const newPosition = event.clientX <= thumb.getBoundingClientRect().left + thumb.offsetWidth / 2 ? 0 : 100;
-    
+    console.log("newPosition"+newPosition)
     gsap.to(thumb, {
       value: newPosition,
       duration: 0.7,

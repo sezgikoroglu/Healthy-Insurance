@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
         step7: { component: DecisionCheckpoint},
         step8: { component: CheckPointGetTokens},
         step9: { component: CheckPointLoseTokens},
-        step10: { component: PopUpCheckpoint},
+        step10:{ component: PopUpCheckpoint},
         step11:{ component: Prescription},
         step12:{ component: PopUpPrescription},
         step13:{ component: Close},
@@ -40,6 +40,7 @@ const AppProvider = ({ children }) => {
     const ActiveStepComponent = Steps[activeStep].component;
     const [imageSrc, setImageSrc] = useState("");
     const [totalToken,setTotalToken]=useState()
+    
     const nextStep=()=>{
         if((activeStep!=="step10") && Number(activeStep.slice(-1))<=9 && !Number(activeStep.slice(-2))){
         const currentStepNumber = Number(activeStep.slice(-1));
@@ -50,6 +51,7 @@ const AppProvider = ({ children }) => {
         setActiveStep(`step${currentStepNumber + 1}`)}
   
       }
+
     const values={
     activeStep,setActiveStep,currentPatient,setCurrentPatient,ActiveStepComponent,imageSrc, setImageSrc, totalToken, setTotalToken, nextStep
     };

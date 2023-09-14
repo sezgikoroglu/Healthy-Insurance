@@ -1,11 +1,23 @@
 import React, { useEffect } from "react";
 import { useApp } from "../context/state";
+import { gsap } from 'gsap/gsap-core';
 
-const AvatarCounter = () => {
+const AvatarCounter = ({tokens}) => {
   const { currentPatient, setCurrentPatient } = useApp();
   const {totalToken,setTotalToken} = useApp();
 
-  
+  useEffect(()=>{
+
+        if (parseInt(tokens) > 0 ){
+              gsap.to(".avatar-counter-wrap",{border: '4px solid #3E944A' ,color: '#fff',backgroundColor:'#4DB95C',y: '-8px', duration:0.5,ease:'none',delay:1.8,onComplete(){
+              gsap.to('.avatar-counter-wrap', {borderColor: 'transparent', color: '#1E344B', backgroundColor:'white', y: '0px' , duration:0.5,delay:1,ease:'none'})}
+              } )}
+          else if (parseInt(tokens) < 0){
+              gsap.to(".avatar-counter-wrap",{border: '4px solid #A42F61' ,color: '#fff',backgroundColor: "#CC3A78",y: '-8px', duration:0.5,ease:'none',delay:1.8,onComplete(){
+              gsap.to('.avatar-counter-wrap', {borderColor: 'transparent', color: '#1E344B', backgroundColor:'white', y: '0px' , duration:0.5,delay:1,ease:'none'})}
+            })
+        }
+  },[])
  
   return (
     <div className="avatar-counter-wrap ">

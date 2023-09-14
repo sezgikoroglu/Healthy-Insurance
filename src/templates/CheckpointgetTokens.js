@@ -3,9 +3,17 @@ import Step6Bgr from "../components/Step6Bgr";
 import Context from '../components/Context';
 import { useApp } from '../context/state';
 
+
 const CheckPointGetTokens = () => {
 
   const {currentPatient,setCurrentPatient}=useApp()
+  const {nextStep} = useApp()
+
+  useEffect(()=>{
+    if(currentPatient.decisionPoint.loseTokens.tokens==="") {
+      nextStep()
+    }
+  },[])
   
   return (
 

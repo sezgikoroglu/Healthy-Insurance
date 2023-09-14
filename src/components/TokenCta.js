@@ -6,10 +6,11 @@ import { useApp } from '../context/state'
 const TokenCta = ({tokens}) => {
 
   const {totalToken,setTotalToken} = useApp();
-  console.log(tokens)
-
+  
   useEffect(()=>{
-    setTotalToken(parseInt(totalToken)+parseInt(tokens))
+    setTimeout(() => {
+      setTotalToken(parseInt(totalToken)+parseInt(tokens))
+    },1800);
   },[])
   
 

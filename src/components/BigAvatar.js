@@ -28,11 +28,12 @@ const BigAvatar = ({state,tokens}) => {
         gsap.to(".big-img",{right:"0",duration:0.5});
       }
 
-      else if (activeStep==="step4" || activeStep==="step5" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step12"){
+      // else if (activeStep==="step4" || activeStep==="step5" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step12"){
+      else{ 
         gsap.set(".big-img",{left:"-50%",duration:0.5});
         gsap.to(".big-img",{left:"20%",duration:0.5,delay:0.5});
         
-          if(activeStep==="step4" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step12" ){
+          if(activeStep==="step4" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step11" ){
             setTimeout(() => {
               {if(parseInt(tokens)>0 ){
                 setImageSrc(currentPatient.images.bigAvatarHappy)
@@ -41,7 +42,7 @@ const BigAvatar = ({state,tokens}) => {
               else{
                 setImageSrc(currentPatient.images.bigAvatarSad)
               }}
-            },2000);
+            },1800);
           }
       }
     },[currentPatient])

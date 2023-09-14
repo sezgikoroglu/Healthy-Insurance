@@ -5,8 +5,6 @@ const Main = () => {
 
     const {ActiveStepComponent} = useApp();
     const {activeStep}=useApp();
-
-    console.log(activeStep)
   
     return (
     <main className='container'>

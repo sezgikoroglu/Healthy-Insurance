@@ -19,7 +19,7 @@ const Context = ({step, modalTitle, modalContent, tokens}) => {
           {step}
         </div>
         <div className=" avatar-counter avatar-counter-abs">
-          <AvatarCounter />
+          <AvatarCounter tokens={tokens}/>
         </div>
         <div className="left-col">
           <BigAvatar state={"normal"}  tokens={tokens} />

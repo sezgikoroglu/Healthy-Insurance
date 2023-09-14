@@ -172,6 +172,13 @@ h6, .h6 {
 	background:linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
 }
 
+.overlay-blue{
+	//background:linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
+	background:linear-gradient(180deg, rgba(160, 226, 254, 1) 0%, #1E344B 100%);
+	
+
+}
+
 .avatar-counter-wrap {
 	display: flex;
 	align-items:center;
@@ -253,4 +260,21 @@ h6, .h6 {
 
 	
 }
+.font-red-color {
+    color: #CC3A78;
+}
 
+.close-p{
+	margin:0 0 3rem;
+}
+
+.uk-flex-column {
+    flex-direction: column;
+}
+.uk-flex {
+    display: flex;
+	a{
+		color: #0097CD;
+    	text-decoration: none;
+	}
+}

@@ -15,8 +15,6 @@ const PopUpCheckpoint = () => {
   },[])
   return (
     <>
-    
-      
               <PopUpContext   step={<Step6Bgr/>} 
                      modalTitle={currentPatient.decisionPoint?.popUp?.title}  
                      modalContent={currentPatient.decisionPoint?.popUp?.content} 
