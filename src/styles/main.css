@@ -152,7 +152,7 @@ h6, .h6 {
   transition: all 0.4s ease;
 }
 .next-btn-wrapper:hover .next-btn {
-  padding-right: 2vw;
+  padding-right: 1vw;
   color: #A0E2FE;
 }
 .next-btn-wrapper .next-btn {
@@ -174,17 +174,7 @@ h6, .h6 {
   width: 100%;
   height: 100%;
 }
-.section-bgr.overlay:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
-}
-.section-bgr.overlay-blue:after {
+cc .section-bgr.overlay-blue:after {
   content: "";
   position: absolute;
   left: 0;
@@ -197,7 +187,7 @@ h6, .h6 {
 
 .ci-section {
   position: relative;
-  aspect-ratio: 16/9;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -219,6 +209,9 @@ h6, .h6 {
   padding: 5vw;
   display: flex;
   flex-direction: column;
+}
+.modal.w-50 {
+  width: 50% !important;
 }
 
 .overlay {
@@ -303,6 +296,10 @@ h6, .h6 {
 
 .font-red-color {
   color: #CC3A78;
+}
+
+.font-green-color {
+  color: rgb(77, 185, 92);
 }
 
 .close-p {
@@ -633,5 +630,54 @@ h6, .h6 {
   right: clamp(15px, 5vw, 65px);
 }
 .step-7 .logo svg {
+  width: 100%;
+}
+
+.sec-13 .modal-info .modal {
+  align-items: center;
+  justify-content: center;
+}
+.sec-13 .modal-info .modal .cost-wrap {
+  display: flex;
+  padding: 20px 37px;
+  border-radius: 24px;
+  background: #FFFFFF;
+  margin-top: 24px;
+  width: 100%;
+}
+.sec-13 .modal-info .modal .cost-wrap .side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.sec-13 .modal-info .modal .cost-wrap .side h5 {
+  width: 100%;
+}
+.sec-13 .modal-info .modal .cost-wrap .side .h3 {
+  margin: 0;
+}
+.sec-13 .modal-info .modal .cost-wrap .left-side {
+  color: #0097CD;
+  border-right: 1px solid #DDDDDD;
+}
+.sec-13 .modal-info .modal .cost-wrap .right-side {
+  padding-left: 30px;
+}
+
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close .big-avatar {
+  position: absolute;
+  left: 20%;
+}
+.close .modal-info {
+  width: 50%;
+  height: 80%;
+}
+.close .modal-info .modal {
   width: 100%;
 }/*# sourceMappingURL=main.css.map */

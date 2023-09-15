@@ -1,0 +1,39 @@
+.sec-13{
+    .modal-info{
+        .modal{
+            align-items: center;
+            justify-content: center;
+            .cost-wrap{
+                display: flex;
+                padding: 20px 37px;
+                border-radius: 24px;
+                background: #FFFFFF;
+                margin-top: 24px;
+                width: 100%;
+
+                .side{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 50%;
+                
+                    h5{
+                        width: 100%;
+                    }
+                    .h3{
+                        margin: 0;
+                    }
+                }
+                .left-side{
+                    
+                    color: #0097CD;
+                    border-right: 1px solid #DDDDDD;
+
+                }
+                .right-side{
+                    padding-left: 30px ;
+                }
+            }
+        }
+    }
+}

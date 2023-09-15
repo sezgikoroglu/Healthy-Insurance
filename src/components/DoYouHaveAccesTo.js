@@ -19,7 +19,8 @@ const DoYouHaveAccessTo = () => {
     console.log("newPosition"+newPosition)
     gsap.to(thumb, {
       value: newPosition,
-      duration: 0.7,
+      duration: 1.5,
+      ease:"none",
       onComplete: () => {
         nextStep(); 
       },
@@ -38,6 +39,7 @@ const DoYouHaveAccessTo = () => {
           <div className="range-container">
             <input
             type="range"
+            draggable
             className="input-range"
             onMouseDown={handleThumbClick} 
             />

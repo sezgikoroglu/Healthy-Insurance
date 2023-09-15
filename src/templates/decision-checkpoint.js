@@ -1,8 +1,13 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import BigAvatar from '../components/BigAvatar';
 import DoYouHaveAccessTo from '../components/DoYouHaveAccesTo';
+import gsap from 'gsap';
 
 const DecisionCheckpoint = () => {
+
+  useEffect(()=>{
+    gsap.set(".big-img",{left:"20%"});
+  })
   return (
     <>
       <section className="ci-section step-7">

@@ -1,0 +1,17 @@
+.close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .big-avatar{
+        position: absolute;
+        left: 20%;
+    }
+    .modal-info{
+        width: 50%;
+        height: 80%;
+    
+        .modal{
+            width: 100%;
+        }
+    }
+}

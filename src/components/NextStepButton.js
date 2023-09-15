@@ -9,7 +9,7 @@ const NextStepButton = ({value}) => {
     const {activeStep, setActiveStep} = useApp()
 
     useEffect(()=>{
-        gsap.to(".next-btn-wrapper",{right:0,delay:2,duration:2,ease:"none"})
+        gsap.to(".next-btn-wrapper",{right:0,delay:1,duration:2,ease:"none"})
     },[])
 
     const nextStep=()=>{

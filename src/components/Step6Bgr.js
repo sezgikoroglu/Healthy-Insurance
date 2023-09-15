@@ -1,6 +1,12 @@
 import React from "react";
+import gsap from "gsap";
 
 function Step6Bgr() {
+
+  gsap.set('#laptop',{opacity:1})
+  gsap.set('#laptop-green',{opacity:0});
+  gsap.set('#laptop-red',{opacity:0})
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -92,7 +92,7 @@ h6, .h6 {
 
 	&:hover{
 		.next-btn{
-			padding-right: 2vw;
+			padding-right: 1vw;
 			color: #A0E2FE;
 		}
 	}
@@ -116,18 +116,7 @@ h6, .h6 {
 		width: 100%;
 		height: 100%;
 	}
-	&.overlay {
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			opacity: .3;
-			background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0.00) 100%);
-		}
-	}
+	cc
 	&.overlay-blue {
 		&:after {
 			content: '';
@@ -144,7 +133,7 @@ h6, .h6 {
 
 .ci-section {
     position: relative;
-    aspect-ratio: 16/9;
+    height: 100vh;
     overflow: hidden;
 
 }
@@ -166,6 +155,10 @@ h6, .h6 {
 	padding:5vw;
 	display: flex;
 	flex-direction: column;
+
+	&.w-50{
+		width: 50% !important;
+	}
 }
 
 .overlay {
@@ -222,6 +215,7 @@ h6, .h6 {
 }
 
 
+
 .bg-green {
 	background: linear-gradient(0deg, #3E944A, #3E944A),
 	linear-gradient(0deg, #4DB95C, #4DB95C);
@@ -262,6 +256,10 @@ h6, .h6 {
 }
 .font-red-color {
     color: #CC3A78;
+}
+
+.font-green-color{
+	color:rgba(77, 185, 92, 1);
 }
 
 .close-p{

@@ -12,11 +12,16 @@ import Prescription from '../templates/prescription';
 import PopUpPrescription from '../templates/pop-up-prescription';
 import Close from '../templates/Close';
 import EnvironmentPopUp from '../templates/environment-popUp';
+import DecisionPrescription from '../templates/DecisionPrescription';
 
+import data from "../data";
 
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+
+    //silincek
+    const patients=data.patients
     
     const Steps = {
         step1: { component: Open },
@@ -31,12 +36,13 @@ const AppProvider = ({ children }) => {
         step10:{ component: PopUpCheckpoint},
         step11:{ component: Prescription},
         step12:{ component: PopUpPrescription},
-        step13:{ component: Close},
+        step13:{ component: DecisionPrescription},
+        step14:{ component: Close},
         
     }
     
-    const [activeStep, setActiveStep] = useState('step1'); // Başlangıçta 'step1' olarak ayarlandı
-    const [currentPatient,setCurrentPatient]=useState();
+    const [activeStep, setActiveStep] = useState('step12'); // Başlangıçta 'step1' olarak ayarlandı
+    const [currentPatient,setCurrentPatient]=useState(patients[0]);
     const ActiveStepComponent = Steps[activeStep].component;
     const [imageSrc, setImageSrc] = useState("");
     const [totalToken,setTotalToken]=useState()
