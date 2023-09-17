@@ -325,12 +325,12 @@ cc .section-bgr.overlay-blue:after {
   width: 40%;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  max-height: 100%;
   background-color: #fff;
   padding: 4vw;
 }
 .step1-section .left-side .logo {
-  margin-bottom: 70px;
+  margin-bottom: 2vw;
 }
 .step1-section .left-side .h2 {
   color: #0097CD;
@@ -416,13 +416,20 @@ cc .section-bgr.overlay-blue:after {
   overflow: hidden;
   width: 100%;
 }
-.small-avatar-wrap:hover > .inner-img-wrp, .small-avatar-wrap.active > .inner-img-wrp {
-  margin-top: -0.3vw;
-  box-shadow: 0px 0px 0px 8px #fff, 16px 16px 16px 0px rgba(30, 52, 75, 0.1);
+.small-avatar-wrap:last-child img {
+  -o-object-position: 0;
+     object-position: 0;
 }
-.small-avatar-wrap:hover > .inner-img-wrp img, .small-avatar-wrap.active > .inner-img-wrp img {
-  -o-object-position: center 0;
-     object-position: center 0;
+.small-avatar-wrap:hover .inner-img-wrap, .small-avatar-wrap.active .inner-img-wrap {
+  box-shadow: 0px 0px 0px 8px #fff, 16px 16px 16px 0px rgba(30, 52, 75, 0.1);
+  margin-top: -0.3vw;
+}
+.small-avatar-wrap:hover .inner-img-wrap img, .small-avatar-wrap.active .inner-img-wrap img {
+  -o-object-position: 0;
+     object-position: 0;
+}
+.small-avatar-wrap.passive {
+  opacity: 0.5;
 }
 
 .avatar-info-wrap {
@@ -672,7 +679,6 @@ cc .section-bgr.overlay-blue:after {
 }
 .close .big-avatar {
   position: absolute;
-  left: 5%;
   width: 25%;
   height: 70%;
   z-index: 5;

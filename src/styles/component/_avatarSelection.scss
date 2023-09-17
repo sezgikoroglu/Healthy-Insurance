@@ -79,17 +79,29 @@
             border-radius: 16px;
             overflow: hidden;
             width: 100%;
+
+        }
+        
+    }
+
+    &:last-child{
+          
+        img{
+            object-position: 0;
         }
     }
 
-    &:hover, &.active {
-        > .inner-img-wrp {
-            margin-top: -.3vw;
+    &:hover, &.active{
+        .inner-img-wrap{
             box-shadow: 0px 0px 0px 8px #fff, 16px 16px 16px 0px rgba(30, 52, 75, 0.10);
-            img {
-                object-position: center 0;
+            margin-top: -0.3vw;
+            img{
+                object-position: 0;
             }
         }
+    }
+    &.passive{
+        opacity: 0.5;
     }
 }
 

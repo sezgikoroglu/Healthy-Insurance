@@ -17,6 +17,8 @@ const BigAvatar = ({state,tokens}) => {
           setImageSrc(currentPatient.images.bigAvatarSad)
         } else if( state==="pensive"){
           setImageSrc(currentPatient.images.bigAvatarPensive)
+        } else if( state==="rx"){
+          setImageSrc(currentPatient.images.bigAvatarRx)
         }
 
     },[])
@@ -30,7 +32,7 @@ const BigAvatar = ({state,tokens}) => {
 
       // else if (activeStep==="step4" || activeStep==="step5" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step12"){
       else{ 
-        gsap.set(".big-img",{left:"-50%",duration:0.5});
+        gsap.set(".big-img",{left:"-70%",duration:0.5});
         gsap.to(".big-img",{left:"20%",duration:0.5,delay:0.5});
         
           if(activeStep==="step4" || activeStep==="step6" || activeStep==="step8" || activeStep==="step9" || activeStep==="step11" ){
