@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import Step1Bgr from "../components/Step1Bgr";
+import Step4Bgr from "../components/Step4Bgr";
 import Context from '../components/Context';
 import { useApp } from '../context/state';
 
 const Environment = () => {
   const {currentPatient,setCurrentPatient}=useApp()
   return (
-    <Context step={<Step1Bgr />}
+    <Context step={<Step4Bgr />}
               modalTitle={currentPatient.environment.title} 
               tokens={currentPatient.environment.tokens}
               modalContent={currentPatient.environment.content}

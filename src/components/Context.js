@@ -10,7 +10,9 @@ const Context = ({step, modalTitle, modalContent, tokens}) => {
     
     useEffect(()=>{
       gsap.set(".modal",{right:"-120%",duration:0.5});
-      gsap.to(".modal",{right:"0",duration:0.5,delay:1});
+      gsap.to(".modal",{right:"0",duration:0.5,delay:1,onComplete(){
+        gsap.to(".next-btn-wrapper",{right:0,duration:1,delay:1.5,ease:"none"})
+      }});
     },[])
       
     return (

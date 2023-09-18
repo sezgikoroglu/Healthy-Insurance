@@ -4,6 +4,26 @@ import { gsap } from "gsap";
 
 function Step3Bgr (props) {
 
+  useEffect(()=>{
+    gsap.to("#sec", 4, {
+      rotation: 360,
+      transformOrigin:"left center",
+      ease:'none',
+      repeat:-1
+   });
+   gsap.to("#min", 24, {
+      rotation: 360,
+      transformOrigin:"bottom center",
+      ease:'none',
+      repeat:-1
+   });
+   gsap.to("#hour", 144, {
+      rotation: 360,
+      transformOrigin:"right center",
+      ease:'none',
+      repeat:-1
+   });
+  },[])
 
   return(
     <svg

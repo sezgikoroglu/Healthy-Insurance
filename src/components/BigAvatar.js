@@ -6,7 +6,7 @@ const BigAvatar = ({state,tokens}) => {
     const {currentPatient,setCurrentPatient} = useApp();
     const {activeStep}=useApp()
     const {imageSrc, setImageSrc} = useApp();
-
+  console.log(state)
     useEffect(()=>{
         
         if (state==="normal"){

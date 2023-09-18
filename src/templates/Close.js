@@ -7,24 +7,26 @@ import gsap from 'gsap';
 
 const Close = () => {
 
-  const {currentPatient,setCurrentPatien}=useApp()
+  const {currentPatient,setCurrentPatient}=useApp()
   const [state,setState]=useState("")
   const step8 = data.steps.find(step => step.id === 'step8');
   const [html,setHtml]=useState("")
 
   useEffect(()=>{
 
+    if(currentPatient.id === 'patient4' || currentPatient.id === 'patient1' || currentPatient.id === 'patient2'  ){
+      setState("happy");
+      setHtml(step8.html.successful);
+    }
+    else{
+      setState("sad")
+      setHtml(step8.html.unsuccessful);
+    }
+    console.log(state)
     gsap.set(".big-avatar",{left:"-150%",duration:0.5});
     gsap.to(".big-avatar",{left:"5%",duration:0.5,delay:0.5}); 
 
-    if(currentPatient.id === 'patient1' || (currentPatient.id === 'patient2') || (currentPatient.id === 'patient4' )){
-        setHtml(step8.html.successful)
-        setState("rx")
-    }
-    else{
-        setHtml(step8.html.unsuccessful)
-        setState("sad")
-    }
+    //4 ve 2 de üzgün surat geliyo
   },[])
   
   return (

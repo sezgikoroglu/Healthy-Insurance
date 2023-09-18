@@ -1,5 +1,5 @@
 import React,{ useEffect}  from 'react';
-import Step1Bgr from '../components/Step1Bgr';
+import Step4Bgr from '../components/Step4Bgr';
 import { useApp } from '../context/state';
 import PopUpContext from '../components/PopUpContext';
 
@@ -14,7 +14,7 @@ const PopUpEnvironment = () => {
     }
   },[])
   return (
-    <PopUpContext  step={<Step1Bgr/>} modalTitle={currentPatient.environment.popUp.title}  modalContent={currentPatient.environment.popUp.content} belowLineContent={currentPatient.environment.popUp.belowLineContent} />
+    <PopUpContext  step={<Step4Bgr/>} modalTitle={currentPatient.environment.popUp.title}  modalContent={currentPatient.environment.popUp.content} belowLineContent={currentPatient.environment.popUp.belowLineContent} />
   )
 }
 

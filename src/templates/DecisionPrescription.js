@@ -54,7 +54,7 @@ const DecisionPrescription = () => {
               </div>
               <div className={(parseInt(totalToken)>=15) ? "side right-side font-green-color" : "side right-side font-red-color"}>
                   <h5 className="h5">Your Balance</h5>
-                  <p className="h3">18</p>
+                  <p className="h3">{totalToken}</p>
               </div>
             </div>
           </div>

@@ -8,7 +8,9 @@ const PopUpContext = ({step, modalTitle, modalContent,belowLineContent}) => {
     
     useEffect(()=>{
         gsap.set(".modal",{right:"-120%",duration:0.5});
-        gsap.to(".modal",{right:"10%",duration:0.5,delay:1});
+        gsap.to(".modal",{right:"10%",duration:0.5,delay:1,onComplete(){
+          gsap.to(".next-btn-wrapper",{right:0,duration:1,delay:0.2,ease:"none"})
+        }});
       },[])
     
  

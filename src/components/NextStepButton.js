@@ -5,11 +5,10 @@ import { useApp } from "../context/state";
 
 const NextStepButton = ({value}) => {
 
-    //const {nextStep}= useApp()
     const {activeStep, setActiveStep} = useApp()
 
     useEffect(()=>{
-        gsap.to(".next-btn-wrapper",{right:0,delay:1,duration:2,ease:"none"})
+        gsap.to(".next-btn-wrapper",{right:0,delay:0.5,duration:1,ease:"none"})
     },[])
 
     const nextStep=()=>{
@@ -20,7 +19,6 @@ const NextStepButton = ({value}) => {
       else if ( activeStep==="step10" || Number(activeStep.slice(-2))>10) {
       const currentStepNumber = Number(activeStep.slice(-2))
       setActiveStep(`step${currentStepNumber + 1}`)}
-
     }
 
   return (
