@@ -14,7 +14,7 @@ const AvatarSelection = () => {
   
 
   return (
-    <section className="step2-section ci-section">
+    <section className="step2-section ci-section uk-animation-fade">
       <div className="section-bgr">
         <Step2Bgr />
       </div>

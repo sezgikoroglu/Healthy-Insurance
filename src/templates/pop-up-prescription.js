@@ -1,6 +1,6 @@
 import React,{ useEffect} from 'react'
 import { useApp } from '../context/state';
-import Step6Bgr from '../components/Step6Bgr';
+import Step7Bgr from '../components/Step7Bgr';
 import PopUpContext from '../components/PopUpContext';
 
 const PopUpPrescription = () => {
@@ -14,7 +14,7 @@ const PopUpPrescription = () => {
   },[])
  
   return (
-     <PopUpContext   step={<Step6Bgr/>} 
+     <PopUpContext   step={<Step7Bgr/>} 
                      modalTitle={currentPatient.receipt?.popUp?.title}  
                      modalContent={currentPatient.receipt?.popUp?.content} 
                      belowLineContent={currentPatient.receipt?.popUp?.belowLineContent}

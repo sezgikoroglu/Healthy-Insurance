@@ -169,7 +169,7 @@ h6, .h6 {
   left: 0;
   top: 0;
   opacity: 0.5;
-  transition: ease 0.8s;
+  transition: ease 1s all;
 }
 .section-bgr svg {
   width: 100%;
@@ -177,6 +177,7 @@ h6, .h6 {
 }
 .section-bgr.overlay:after {
   content: "";
+  transition: ease 1s all;
   position: absolute;
   left: 0;
   top: 0;

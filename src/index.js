@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import "uikit/dist/css/uikit-core.min.css";
+import "uikit/dist/css/uikit.min.css";
 import reportWebVitals from './reportWebVitals';
+
 import "./styles/main.css"
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

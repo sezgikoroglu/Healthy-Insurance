@@ -12,6 +12,8 @@ const NextStepButton = ({value}) => {
     },[])
 
     const nextStep=()=>{
+      if (value==="close"){setActiveStep(`step1`)}
+      else{
       if((activeStep!=="step10") && Number(activeStep.slice(-1))<=9 && !Number(activeStep.slice(-2))){
       const currentStepNumber = Number(activeStep.slice(-1));
       setActiveStep(`step${currentStepNumber + 1}`)
@@ -19,6 +21,7 @@ const NextStepButton = ({value}) => {
       else if ( activeStep==="step10" || Number(activeStep.slice(-2))>10) {
       const currentStepNumber = Number(activeStep.slice(-2))
       setActiveStep(`step${currentStepNumber + 1}`)}
+    }
     }
 
   return (

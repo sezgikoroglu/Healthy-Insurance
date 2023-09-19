@@ -8,7 +8,7 @@ const Prescription = () => {
   const {currentPatient,setCurrentPatient}=useApp()
   return (
   
-     <Context step={<Step7Bgr />}
+     <Context step={<Step7Bgr />} stepNo="7"
               modalTitle={currentPatient.receipt.title} 
               tokens={currentPatient.receipt.tokens}
               modalContent={currentPatient.receipt.content}

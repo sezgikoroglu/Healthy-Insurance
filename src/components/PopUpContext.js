@@ -15,7 +15,7 @@ const PopUpContext = ({step, modalTitle, modalContent,belowLineContent}) => {
     
  
     return (
-    <section className="section-4 ci-section">
+    <section className="section-4 ci-section uk-animation-fade">
       <div className="section-bgr">
         {step}
       </div>

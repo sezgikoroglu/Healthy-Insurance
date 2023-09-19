@@ -4,6 +4,7 @@ import Step7Bgr from '../components/Step7Bgr'
 import data from "../data";
 import BigAvatar from '../components/BigAvatar';
 import gsap from 'gsap';
+import NextStepButton from '../components/NextStepButton';
 
 const Close = () => {
 
@@ -41,6 +42,7 @@ const Close = () => {
           <div dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
+        <NextStepButton value={"close"}/>
     </section>
     </>
   )
