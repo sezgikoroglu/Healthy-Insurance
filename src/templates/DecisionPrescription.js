@@ -9,6 +9,7 @@ import gsap from "gsap";
 const DecisionPrescription = () => {
   const { totalToken, setTotalToken } = useApp();
   const [state,setState]=useState("")
+  const [overlayClass, setOverlayClass] = useState(false);
 
   useEffect(()=>{
 
@@ -16,6 +17,7 @@ const DecisionPrescription = () => {
       setState("happy")
     }else{
       setState("sad")
+      setOverlayClass(true)
     }
     
     gsap.set(".big-img",{left:"20%"});
@@ -26,7 +28,7 @@ const DecisionPrescription = () => {
 
   return (
     <div className="section-4 sec-13 ci-section">
-         <div className="section-bgr">
+         <div className={`section-bgr ${overlayClass ? 'overlay' : ''}`}>
          <Step6Bgr/>
         </div>
         <div className="avatar-counter avatar-counter-abs">

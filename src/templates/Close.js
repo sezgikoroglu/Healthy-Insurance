@@ -22,7 +22,7 @@ const Close = () => {
       setState("sad")
       setHtml(step8.html.unsuccessful);
     }
-    console.log(state)
+    
     gsap.set(".big-avatar",{left:"-150%",duration:0.5});
     gsap.to(".big-avatar",{left:"5%",duration:0.5,delay:0.5}); 
 

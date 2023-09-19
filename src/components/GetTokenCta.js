@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap/gsap-core';
-//import { useApp } from '../context/state';
+import Lottie from 'lottie-react';
 
 const GetTokenCta = ({tokens}) => {
 
@@ -8,10 +8,19 @@ const GetTokenCta = ({tokens}) => {
   useEffect(()=>{
     if(parseInt(tokens) > 0 ){
       gsap.set(".get-token-btn",{top:"0",background:"none",color:"black",duration:0.5})
-      gsap.to(".get-token-btn",{top:"-20%",background:"green",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8});
+      gsap.to(".get-token-btn",{top:"-20%",background:"#4DB95C",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8});
     }
     
   },[])
+
+  const defaultOptions = {
+		loop: false,
+		autoplay: true,
+		animationData: './../assets/confetti',
+		rendererSettings: {
+			preserveAspectRatio: "xMidYMid slice"
+		}
+	};
  
 
   return (
@@ -44,7 +53,13 @@ const GetTokenCta = ({tokens}) => {
             stroke="#F6E96F"
             stroke-width="4"
           />
-        </svg>
+        </svg><Lottie
+							className="lottie-animation"
+							options={defaultOptions}
+							height={400}
+							width={400}
+						/>
+
         <p className='tokens-title'>Get Tokens!</p>
     </div>
   )

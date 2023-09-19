@@ -1,30 +1,34 @@
 import React from "react";
 import { useApp } from "../context/state";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { gsap } from 'gsap';
 
 const DoYouHaveAccessTo = () => {
 
     const {activeStep,setActiveStep} = useApp();
+    let decisionPointValue = useApp()
+    let sliderInput = React.useRef();
     
     const nextStep=()=>{
       const currentStepNumber = Number(activeStep.slice(-1));
       setActiveStep(`step${currentStepNumber + 1}`);
     }
 
-  const handleThumbClick = (event) => {
-    console.log("event.clientX"+event.cli)
-    const thumb = event.target;
-    const newPosition = event.clientX <= thumb.getBoundingClientRect().left + thumb.offsetWidth / 2 ? 0 : 100;
-    console.log("newPosition"+newPosition)
-    gsap.to(thumb, {
-      value: newPosition,
-      duration: 1.5,
-      ease:"none",
-      onComplete: () => {
-        nextStep(); 
-      },
-    });
+  const sliderChange=(e)=>{
+    if (e.currentTarget.value > 50){
+      gsap.to(sliderInput.current,{value:95,duration:0.5,ease:"none"})
+      decisionPointValue=90
+      setTimeout(() => {
+        nextStep();
+      }, "600");
+    } else if(e.currentTarget.value < 50 ){
+      gsap.to(sliderInput.current,{value:5,duration:0.5,ease:"none"})
+      decisionPointValue=10
+      setTimeout(() => {
+        nextStep();
+      }, "600");
+    }
+    
   }
 
   return (
@@ -39,9 +43,12 @@ const DoYouHaveAccessTo = () => {
           <div className="range-container">
             <input
             type="range"
-            draggable
+            min="1"
+            max="100"
+            defaultValue="50"
             className="input-range"
-            onMouseDown={handleThumbClick} 
+            ref={sliderInput}
+            onTouchEnd={(e)=>sliderChange(e)} onMouseUp={(e)=>sliderChange(e)}
             />
           </div>
         </div>

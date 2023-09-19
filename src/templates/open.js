@@ -1,13 +1,14 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { useApp } from '../context/state';
 import Step1Bgr from "../components/Step1Bgr"
 import data from "../data";
 import NextStepButton from '../components/NextStepButton';
+import gsap from 'gsap';
 
 const Open = () => {
 
   const step1 = data.steps[0]
- 
+  
   return (
     <section className='step1-section ci-section'>
       <div className="section-bgr">
@@ -23,7 +24,7 @@ const Open = () => {
       <div className="right-side ">
         <img src="/assests/people.png" alt="" />
       </div>
-      <NextStepButton value={"contunie"}/>
+      {<NextStepButton value={"continue"}/>}
     </section>
   )
 }

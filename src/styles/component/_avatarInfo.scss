@@ -13,21 +13,27 @@
             margin-bottom: clamp(20px, 1.3vw, 70px);
             padding-bottom: clamp(20px, 1.3vw, 70px);
 
-            
+            .h3,h4{
+                margin: 0;
+            }
 
             &:last-child {
             border:none;
             }
-
             .determinant-row {
                 display: flex;
                 align-items: center;
-                margin-bottom: 18px;
+                margin-bottom: clamp(8px, 0.6vw, 40px);
 
                 .determinant-img {
-                    width: 40px;
-                    height: 40px;
-                    margin-right: 16px;
+                    margin-right: clamp(15px, 1vw, 60px);
+                    border-radius: 50%;
+                    width: clamp(32px, 2.2vw, 50px);
+                    min-width: clamp(32px, 2.2vw, 50px);
+                    height: clamp(32px, 2.2vw, 50px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     svg {
                         width: 100%;

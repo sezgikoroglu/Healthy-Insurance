@@ -41,11 +41,14 @@ const AppProvider = ({ children }) => {
         
     }
     
-    const [activeStep, setActiveStep] = useState('step1'); // Başlangıçta 'step1' olarak ayarlandı
-    const [currentPatient,setCurrentPatient]=useState("");
+    
+    const [activeStep, setActiveStep] = useState('step7'); // Başlangıçta 'step1' olarak ayarlandı
+    const [currentPatient,setCurrentPatient]=useState(patients[0]);
     const ActiveStepComponent = Steps[activeStep].component;
     const [imageSrc, setImageSrc] = useState("");
-    const [totalToken,setTotalToken]=useState()
+    const [totalToken,setTotalToken]=useState();
+    const [showButton,setShowButton]=useState(false)
+    const decisionPointValue = null
     
     const nextStep=()=>{
         if((activeStep!=="step10") && Number(activeStep.slice(-1))<=9 && !Number(activeStep.slice(-2))){
@@ -59,7 +62,7 @@ const AppProvider = ({ children }) => {
       }
 
     const values={
-    activeStep,setActiveStep,currentPatient,setCurrentPatient,ActiveStepComponent,imageSrc, setImageSrc, totalToken, setTotalToken, nextStep
+    activeStep,setActiveStep,currentPatient,setCurrentPatient,ActiveStepComponent,imageSrc, setImageSrc, totalToken, setTotalToken, nextStep, decisionPointValue
     };
     
     return (

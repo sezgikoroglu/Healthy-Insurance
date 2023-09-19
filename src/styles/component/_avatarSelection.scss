@@ -5,7 +5,10 @@
     background-color: #39f;
     background: linear-gradient(137deg, rgba(160, 226, 254, 0) 0%, rgba(160, 226, 254, 0.23) 36.85%, rgba(183, 232, 253, 0.52) 66.67%, #E5F7FF 100%), #fff;
     display: flex;
-
+    .section-bgr{
+        display: flex;
+        bottom: 0;
+    }
     .first-col {
         width: 30%;
         padding: 5vw 10px 5vw 5vw;

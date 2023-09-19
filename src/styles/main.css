@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100svh;
   position: relative;
   z-index: 1;
   color: #000;
@@ -169,20 +169,21 @@ h6, .h6 {
   left: 0;
   top: 0;
   opacity: 0.5;
+  transition: ease 0.8s;
 }
 .section-bgr svg {
   width: 100%;
   height: 100%;
 }
-cc .section-bgr.overlay-blue:after {
+.section-bgr.overlay:after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.9;
-  background: linear-gradient(180deg, #A0E2FE 0%, rgba(30, 52, 75, 0) 100%);
+  opacity: 0.5;
+  background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
 }
 
 .ci-section {
@@ -212,14 +213,6 @@ cc .section-bgr.overlay-blue:after {
 }
 .modal.w-50 {
   width: 50% !important;
-}
-
-.overlay {
-  background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
-}
-
-.overlay-blue {
-  background: linear-gradient(180deg, rgb(160, 226, 254) 0%, #1E344B 100%);
 }
 
 .avatar-counter-wrap {
@@ -350,6 +343,10 @@ cc .section-bgr.overlay-blue:after {
   background: linear-gradient(137deg, rgba(160, 226, 254, 0) 0%, rgba(160, 226, 254, 0.23) 36.85%, rgba(183, 232, 253, 0.52) 66.67%, #E5F7FF 100%), #fff;
   display: flex;
 }
+.step2-section .section-bgr {
+  display: flex;
+  bottom: 0;
+}
 .step2-section .first-col {
   width: 30%;
   padding: 5vw 10px 5vw 5vw;
@@ -448,18 +445,26 @@ cc .section-bgr.overlay-blue:after {
   margin-bottom: clamp(20px, 1.3vw, 70px);
   padding-bottom: clamp(20px, 1.3vw, 70px);
 }
+.avatar-info-wrap .avatar-info .info-row .h3, .avatar-info-wrap .avatar-info .info-row h4 {
+  margin: 0;
+}
 .avatar-info-wrap .avatar-info .info-row:last-child {
   border: none;
 }
 .avatar-info-wrap .avatar-info .info-row .determinant-row {
   display: flex;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: clamp(8px, 0.6vw, 40px);
 }
 .avatar-info-wrap .avatar-info .info-row .determinant-row .determinant-img {
-  width: 40px;
-  height: 40px;
-  margin-right: 16px;
+  margin-right: clamp(15px, 1vw, 60px);
+  border-radius: 50%;
+  width: clamp(32px, 2.2vw, 50px);
+  min-width: clamp(32px, 2.2vw, 50px);
+  height: clamp(32px, 2.2vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .avatar-info-wrap .avatar-info .info-row .determinant-row .determinant-img svg {
   width: 100%;

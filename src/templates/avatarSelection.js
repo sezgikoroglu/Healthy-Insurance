@@ -11,6 +11,7 @@ const AvatarSelection = () => {
   const step2 = data.steps[1];
   const patients = data.patients;
   const { currentPatient, setCurrentPatient } = useApp();
+  
 
   return (
     <section className="step2-section ci-section">

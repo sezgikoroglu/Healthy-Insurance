@@ -71,6 +71,15 @@ h6, .h6 {
     color: #0097CD;
 }
 
+// #sun {
+// 	animation: 7s sun-transform;
+// }
+
+// #sun-bgr {
+// 	animation: animate-pulse 3s linear infinite;
+// 	animation-delay: 4s;
+// }
+
 .next-btn-wrapper {
 	position: absolute;
     right: -100%;
@@ -112,12 +121,13 @@ h6, .h6 {
 	left: 0;
 	top: 0;
 	opacity: 0.5;
+	transition: ease 0.8s;
 	svg {
 		width: 100%;
 		height: 100%;
 	}
-	cc
-	&.overlay-blue {
+	
+	&.overlay {
 		&:after {
 			content: '';
 			position: absolute;
@@ -125,8 +135,8 @@ h6, .h6 {
 			top: 0;
 			width: 100%;
 			height: 100%;
-			opacity: 0.9;
-			background: linear-gradient(180deg, #A0E2FE 0%, rgba(30, 52, 75, 0.00) 100%);
+			opacity: 0.5;
+			background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
 		}
 	}
 }
@@ -161,16 +171,22 @@ h6, .h6 {
 	}
 }
 
-.overlay {
-	background:linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
-}
+// .overlay {
+// 	position: absolute;
+// 			left: 0;
+// 			top: 0;
+// 			width: 100%;
+// 			height: 100%;
+// 			opacity: 0.9;
+// 			background: linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
+// }
 
-.overlay-blue{
-	//background:linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
-	background:linear-gradient(180deg, rgba(160, 226, 254, 1) 0%, #1E344B 100%);
+// .overlay-blue{
+// 	//background:linear-gradient(180deg, #1E344B 0%, rgba(30, 52, 75, 0) 100%);
+// 	background:linear-gradient(180deg, rgba(160, 226, 254, 1) 0%, #1E344B 100%);
 	
 
-}
+// }
 
 .avatar-counter-wrap {
 	display: flex;

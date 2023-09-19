@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Step1Bgr from "../components/Step1Bgr";
+import Step4Bgr from "../components/Step4Bgr";
 import AvatarCounter from "../components/AvatarCounter";
 import NextStepButton from "../components/NextStepButton";
 import { useApp } from '../context/state';
@@ -19,7 +19,7 @@ const EnvironmentPopUp = () => {
   return (
     <section className="section-3 ci-section">
       <div className="section-bgr overlay">
-        <Step1Bgr />
+        <Step4Bgr />
       </div>
       <div className="modal-info">
         <AvatarCounter/>
