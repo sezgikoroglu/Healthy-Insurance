@@ -33,9 +33,9 @@ const PopUpContext = ({step, modalTitle, modalContent,belowLineContent}) => {
               {modalContent}
             </p>
             <hr />
-            <p className='below-content'>
+            <a className='below-content'>
             {belowLineContent}
-            </p>
+            </a>
           </div>
         </div>
       </div>

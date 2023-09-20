@@ -1,27 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { gsap } from 'gsap/gsap-core';
 import Lottie from 'lottie-react';
+//import Confetti from "./../assests/confetti.json"
 
 const GetTokenCta = ({tokens}) => {
 
 
   useEffect(()=>{
     if(parseInt(tokens) > 0 ){
+      
       gsap.set(".get-token-btn",{top:"0",background:"none",color:"black",duration:0.5})
-      gsap.to(".get-token-btn",{top:"-20%",background:"#4DB95C",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8});
+      gsap.to(".get-token-btn",{top:"-20%",background:"#4DB95C",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8,onStart(){
+        new Audio("./success.mp3")?.play();
+      }})
     }
     
   },[])
 
-  const defaultOptions = {
-		loop: false,
-		autoplay: true,
-		animationData: './../assets/confetti',
-		rendererSettings: {
-			preserveAspectRatio: "xMidYMid slice"
-		}
-	};
+  // const defaultOptions = {
+	// 	loop: false,
+	// 	autoplay: true,
+	// 	animationData: Confetti,
+	// 	rendererSettings: {
+	// 		preserveAspectRatio: "xMidYMid slice"
+	// 	}
+	// };
  
+  // const [animationFinished, setAnimationFinished] = useState(false);
+
+  // const handleAnimationComplete = () => {
+	// 	setAnimationFinished(true);
+	// };
 
   return (
     <div className='get-token-btn btn-wrap'>
@@ -53,13 +62,25 @@ const GetTokenCta = ({tokens}) => {
             stroke="#F6E96F"
             stroke-width="4"
           />
-        </svg><Lottie
-							className="lottie-animation"
-							options={defaultOptions}
-							height={400}
-							width={400}
-						/>
-
+        </svg>
+        {/* <>
+          {!animationFinished && (
+                  <Lottie
+                    
+                    className="lottie-animation"
+                    options={defaultOptions}
+                    height= 'auto'
+                    width= '155%'
+                    eventListeners={[
+                      {
+                        eventName: "complete",
+                        callback: handleAnimationComplete,
+                      },
+                    ]}
+                  />
+                )}
+               
+              </> */}
         <p className='tokens-title'>Get Tokens!</p>
     </div>
   )

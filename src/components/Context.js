@@ -18,7 +18,10 @@ const Context = ({step,stepNo, modalTitle, modalContent, tokens}) => {
       gsap.set(".modal",{right:"-120%",duration:0.5});
       gsap.to(".modal",{right:"0",duration:0.5,delay:1,onComplete(){
         if(tokens<0){
-        setOverlayClass(true)
+          setTimeout(()=>{
+            setOverlayClass(true)
+          },500)
+       
       }
 
       if(stepNo==="7"){
@@ -45,7 +48,7 @@ const Context = ({step,stepNo, modalTitle, modalContent, tokens}) => {
           gsap.to('#laptop',{opacity:0,duration:0.7,delay:1});
           gsap.to('#laptop-red',{opacity:1,duration:0.7,delay:1});
           gsap.to('.laptop-backround',{duration:0.7,delay:1, onComplete(){
-            gsap.to('.laptop-backround',{duration:1,onComplete(){
+          gsap.to('.laptop-backround',{duration:1,onComplete(){
 					gsap.to('.laptop-screen-title',{opacity:1,duration:0.7,delay:0.5, y:'0'});
 					gsap.to('.laptop-screen-content',{opacity:1,duration:0.7,delay:1.5,y:'0'});
 					gsap.to('.laptop-screen-icon',{opacity:1,duration:0.7,delay:1,y:'0'});
@@ -75,7 +78,7 @@ const Context = ({step,stepNo, modalTitle, modalContent, tokens}) => {
           <div className="modal-info">
             <div className="modal">
               <h1>{modalTitle}</h1>
-              <p>
+              <p className='medium-text'>
                 {modalContent}
               </p>
               <TokenCta tokens={tokens}/>

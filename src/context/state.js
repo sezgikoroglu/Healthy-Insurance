@@ -47,7 +47,8 @@ const AppProvider = ({ children }) => {
     const ActiveStepComponent = Steps[activeStep].component;
     const [imageSrc, setImageSrc] = useState("");
     const [totalToken,setTotalToken]=useState();
-    const [showButton,setShowButton]=useState(false)
+    const [showButton,setShowButton]=useState(false);
+    
     const decisionPointValue = null
     
     const nextStep=()=>{

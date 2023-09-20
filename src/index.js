@@ -4,7 +4,6 @@ import App from './App';
 import "uikit/dist/css/uikit-core.min.css";
 import "uikit/dist/css/uikit.min.css";
 import reportWebVitals from './reportWebVitals';
-
 import "./styles/main.css"
 
 

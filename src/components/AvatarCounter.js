@@ -20,10 +20,13 @@ const AvatarCounter = ({tokens}) => {
   },[])
  
   return (
-    <div className="avatar-counter-wrap ">
+    <div className="total-token">
+         <div className="avatar-counter-wrap ">
       <div className="left-side">
         <img
           className="avatar-img"
+          width={64}
+          height={64}
           src={currentPatient.images.smallAvatar}
         ></img>
         <p className="medium-text">{currentPatient.name}'s SDOH</p>
@@ -61,6 +64,8 @@ const AvatarCounter = ({tokens}) => {
         <div className="medium-text">{totalToken}</div>
       </div>
     </div>
+    </div>
+   
   );
 };
 
