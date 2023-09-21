@@ -216,7 +216,7 @@ h6, .h6 {
   box-shadow: 0px 32px 39px 0px rgba(30, 52, 75, 0.11);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  padding: 5vw;
+  padding: clamp(30px, 4vw, 160px);
   display: flex;
   flex-direction: column;
 }
@@ -224,35 +224,91 @@ h6, .h6 {
   width: 50% !important;
 }
 
-.avatar-counter-wrap {
+.token-wrap {
+  display: flex;
+  flex-direction: column;
+  border-radius: 72px;
+  background: rgb(255, 255, 255);
+  font-size: clamp(20px, 1.25vw, 50px);
+  font-family: "neusa-next-std", sans-serif;
+  line-height: 1.5;
+  border: 4px solid transparent;
+  z-index: 100;
+}
+.token-wrap .avatar-counter-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 42px 5px 12px;
   border-radius: 72px;
-  background: rgb(255, 255, 255);
 }
-.avatar-counter-wrap .left-side {
+.token-wrap .avatar-counter-wrap .left-side {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  padding-right: 32px;
+  padding-right: 24px;
   border-right: 1px solid rgb(221, 221, 221);
 }
-.avatar-counter-wrap .left-side img {
+.token-wrap .avatar-counter-wrap .left-side img {
   border-radius: 50%;
   width: 64px;
   height: 64px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.avatar-counter-wrap .right-side {
+.token-wrap .avatar-counter-wrap .right-side {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  padding-left: 32px;
+  gap: 10px;
+  padding-left: 24px;
+}
+.token-wrap .avatar-determinants {
+  position: absolute;
+  top: 50%;
+  background: #fff;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 0.4s ease;
+  padding: clamp(35px, 3vw, 100px) clamp(15px, 1.4vw, 60px) clamp(15px, 1.4vw, 60px);
+  font-size: 0.8em;
+  max-height: 80vh;
+  width: calc(100% + 8px);
+  margin-left: -4px;
+  border-radius: 0 0 48px 48px;
+  max-height: 940%;
+}
+.token-wrap .avatar-determinants .h5, .token-wrap .avatar-determinants h3 {
+  font-size: 0.8vw;
+}
+.token-wrap .avatar-determinants .determinant-row {
+  display: flex;
+  align-items: center;
+  margin-top: 1vw;
+}
+.token-wrap .avatar-determinants .determinant-row .determinant-img {
+  margin-right: clamp(15px, 1vw, 60px);
+  border-radius: 50%;
+  width: clamp(32px, 2.2vw, 50px);
+  min-width: clamp(32px, 2.2vw, 50px);
+  height: clamp(32px, 2.2vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.token-wrap .avatar-determinants .determinant-row .determinant-img svg {
+  width: 100%;
+  height: 100%;
+}
+.token-wrap .avatar-determinants .determinant-row .determinant-p {
+  font-size: clamp(17px, 1.1vw, 42px);
+}
+.token-wrap:hover .avatar-determinants {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .avatar-counter-abs {
@@ -322,6 +378,9 @@ h6, .h6 {
 
 .step1-section {
   display: flex;
+}
+.step1-section .section-bgr {
+  opacity: 0.5;
 }
 .step1-section .left-side {
   width: 40%;
@@ -491,9 +550,9 @@ h6, .h6 {
 .section-3 .section-bgr {
   opacity: 1;
 }
-.section-3 .avatar-counter-wrap {
+.section-3 .token-wrap {
   transform: translateY(50%);
-  z-index: 10;
+  z-index: 2;
 }
 .section-3 .modal {
   width: 62%;
@@ -539,7 +598,6 @@ h6, .h6 {
 .section-4 .right-col hr {
   height: 1px; /* Çizginin yüksekliğini ayarlayın */
   background-color: rgb(160, 226, 254);
-  margin-bottom: 24px;
 }
 .section-4 .right-col .below-content {
   color: #0097CD;

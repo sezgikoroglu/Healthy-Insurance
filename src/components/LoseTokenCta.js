@@ -10,7 +10,7 @@ const LoseTokenCta = ({tokens}) => {
     if(parseInt(tokens) <= 0 ){
       gsap.set(".lose-token-btn",{top:"0",background:"none",color:"black",duration:0.5})
       gsap.to(".lose-token-btn",{top:"20%",background:"rgba(214, 97, 147, 1)",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8,onStart(){
-        new Audio("./lose.mp3")?.play();
+        //new Audio("./lose.mp3")?.play();
       }});
     }
   },[])

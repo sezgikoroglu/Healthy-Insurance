@@ -11,7 +11,7 @@ const GetTokenCta = ({tokens}) => {
       
       gsap.set(".get-token-btn",{top:"0",background:"none",color:"black",duration:0.5})
       gsap.to(".get-token-btn",{top:"-20%",background:"#4DB95C",color:"white",boxShadow:"16px 16px 16px 0px rgba(30, 52, 75, 0.1)",duration:0.5,delay:1.8,onStart(){
-        new Audio("./success.mp3")?.play();
+        //new Audio("./success.mp3")?.play();
       }})
     }
     

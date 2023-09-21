@@ -78,9 +78,9 @@ const Context = ({step,stepNo, modalTitle, modalContent, tokens}) => {
           <div className="modal-info">
             <div className="modal">
               <h1>{modalTitle}</h1>
-              <p className='medium-text'>
+              <div className='medium-text'>
                 {modalContent}
-              </p>
+              </div>
               <TokenCta tokens={tokens}/>
             </div>
           </div>

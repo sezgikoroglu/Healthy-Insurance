@@ -16,11 +16,9 @@ const Close = () => {
   useEffect(()=>{
 
     if(currentPatient.id === 'patient4' || currentPatient.id === 'patient1' || currentPatient.id === 'patient2'  ){
-      setState("happy");
       setHtml(step8.html.successful);
     }
     else{
-      setState("sad")
       setHtml(step8.html.unsuccessful);
     }
     
@@ -36,7 +34,7 @@ const Close = () => {
         <div className="section-bgr overlay-blue ">
           <Step7Bgr />
         </div>
-        <BigAvatar state={state}/>
+        <BigAvatar state={(currentPatient.id === 'patient4' || 'patient1' ||'patient2')? "happy" : "sad" }/>
         <div className="modal-info ">
           <div className="modal">
           <div dangerouslySetInnerHTML={{ __html: html }} />
